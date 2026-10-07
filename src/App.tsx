@@ -2,7 +2,7 @@
  * WUSE MARKET ONLINE - Virtual Abuja Market
  * Upgraded with Money Features, Vendor Dashboard & Super Admin
  */
-
+import SuperAdmin from ''./pages/SuperAmin''
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import {
   Compass,
