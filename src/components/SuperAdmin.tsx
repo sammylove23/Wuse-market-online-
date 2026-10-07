@@ -15,7 +15,7 @@ type Stall = {
 }
 
 export default function SuperAdmin() {
-  const REAL_PASSWORD = "Samuel239"
+  const REAL_PASSWORD = "Christylove239"
   const [password, setPassword] = useState("")
   const [isAuth, setIsAuth] = useState(false)
   const [search, setSearch] = useState("")
@@ -28,7 +28,7 @@ export default function SuperAdmin() {
 
   const login = () => {
     if (password === REAL_PASSWORD) setIsAuth(true)
-    else alert("Incorrect password. Use Samuel239")
+    else alert("Incorrect password. Use Christylove239")
   }
 
   const filtered = stalls.filter(s => s.businessName.toLowerCase().includes(search.toLowerCase()) || s.whatsapp.includes(search))
@@ -52,7 +52,7 @@ export default function SuperAdmin() {
           <h1 className="text-white font-bold mb-4">SUPER ADMIN LOGIN</h1>
           <input type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="Enter password" className="w-full p-3 rounded bg-zinc-800 text-white mb-3"/>
           <button onClick={login} className="w-full bg-green-500 text-black font-bold p-3 rounded">LOGIN</button>
-          <p className="text-zinc-500 text-xs mt-3">Password is Samuel239</p>
+          <p className="text-zinc-500 text-xs mt-3">Password is Christylove239</p>
         </div>
       </div>
     )
