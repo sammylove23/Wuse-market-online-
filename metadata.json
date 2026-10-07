@@ -1,0 +1,8 @@
+{
+  "name": "Wuse Market Online",
+  "description": "Virtual Abuja Market - Walk around, explore real stalls, and chat directly with Abuja vendors on WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

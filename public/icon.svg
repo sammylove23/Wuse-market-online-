@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="100" fill="#FF6B00"/>
+  <!-- Canopy Roof -->
+  <path d="M60 180 L256 90 L452 180 L420 230 L356 210 L300 230 L256 210 L212 230 L156 210 L92 230 Z" fill="#008751" stroke="#ffffff" stroke-width="8" stroke-linejoin="round"/>
+  <!-- Canopy Stripes -->
+  <path d="M156 210 L212 230 L220 106 L175 125 Z" fill="#ffffff" opacity="0.9"/>
+  <path d="M300 230 L356 210 L337 125 L292 106 Z" fill="#ffffff" opacity="0.9"/>
+  <!-- Stall Frame Pillars -->
+  <rect x="90" y="226" width="16" height="180" rx="4" fill="#5c2d12"/>
+  <rect x="406" y="226" width="16" height="180" rx="4" fill="#5c2d12"/>
+  <rect x="74" y="340" width="364" height="74" rx="10" fill="#2c1a0e" stroke="#ffffff" stroke-width="6"/>
+  <!-- Stall Counter Table -->
+  <rect x="84" y="348" width="344" height="20" rx="4" fill="#FF8C38"/>
+  <!-- Market Produce & Phones on Display -->
+  <circle cx="140" cy="325" r="22" fill="#E53E3E"/>
+  <circle cx="170" cy="328" r="18" fill="#F6AD55"/>
+  <circle cx="200" cy="324" r="20" fill="#48BB78"/>
+  <rect x="240" y="300" width="28" height="46" rx="5" fill="#1A202C" stroke="#48BB78" stroke-width="4"/>
+  <rect x="280" y="295" width="32" height="52" rx="6" fill="#3182CE" stroke="#E2E8F0" stroke-width="4"/>
+  <circle cx="345" cy="320" r="24" fill="#ECC94B"/>
+  <circle cx="375" cy="326" r="18" fill="#9F7AEA"/>
+  <!-- "WUSE" Banner Badge -->
+  <rect x="136" y="375" width="240" height="42" rx="8" fill="#008751"/>
+  <text x="256" y="405" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="4">WUSE MARKET</text>
+  <!-- Shopping Bag Sparkle -->
+  <circle cx="395" cy="120" r="14" fill="#FEEBC8"/>
+  <path d="M395 95 L399 113 L417 117 L399 121 L395 139 L391 121 L373 117 L391 113 Z" fill="#ffffff"/>
+</svg>

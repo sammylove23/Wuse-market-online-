@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-orange: #FF6B00;
+    --abuja-green: #008751;
+    --market-ground: #2a241f;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #12100E;
+    color: #F3F4F6;
+    overflow-x: hidden;
+    touch-action: pan-x pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-pixel {
+  font-family: 'Silkscreen', monospace, system-ui;
+}
+
+/* Custom market ground paving pattern */
+.market-grid-pattern {
+  background-color: #241d17;
+  background-image: 
+    linear-gradient(#2f261e 1px, transparent 1px),
+    linear-gradient(90deg, #2f261e 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Mobile joystick touch area styling */
+.joystick-zone {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #181411;
+}
+::-webkit-scrollbar-thumb {
+  background: #3c322b;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B00;
+}

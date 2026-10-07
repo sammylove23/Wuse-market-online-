@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128;
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Stalls collection
+    match /stalls/{stallId} {
+      allow read: if true;
+      allow create, update: if isValidId(stallId);
+      allow delete: if true;
+    }
+
+    // Leads collection (advertisements & stall bookings)
+    match /leads/{leadId} {
+      allow read: if true;
+      allow create: if isValidId(leadId);
+      allow update, delete: if true;
+    }
+
+    // Visitors collection (real-time shopper presence & multiplayer positions)
+    match /visitors/{visitorId} {
+      allow read: if true;
+      allow create, update: if isValidId(visitorId);
+      allow delete: if true;
+    }
+  }
+}

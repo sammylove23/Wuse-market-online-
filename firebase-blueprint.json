@@ -1,0 +1,73 @@
+{
+  "entities": {
+    "Stall": {
+      "title": "Stall",
+      "description": "A merchant stall in the virtual Wuse Market",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique stall identifier" },
+        "name": { "type": "string", "description": "Business or stall name" },
+        "stallNumber": { "type": "number", "description": "Stall unit number in market" },
+        "category": { "type": "string", "description": "Category e.g. fashion, phones, food, thrift, beauty, shoes" },
+        "whatsapp": { "type": "string", "description": "Nigerian WhatsApp contact number" },
+        "description": { "type": "string", "description": "Stall bio or offerings description" },
+        "priceRange": { "type": "string", "description": "Typical price guide in Naira" },
+        "images": { "type": "string", "description": "Comma separated or serialized image URLs" },
+        "views": { "type": "number", "description": "Number of shoppers who opened the stall" },
+        "whatsappClicks": { "type": "number", "description": "Number of shoppers who clicked WhatsApp chat" },
+        "rating": { "type": "number", "description": "Average user star rating 1-5" },
+        "ratingCount": { "type": "number", "description": "Total number of ratings submitted" },
+        "rentExpiry": { "type": "string", "description": "Stall rental expiry date" },
+        "renewalStatus": { "type": "string", "description": "active, pending_renewal, or expired" },
+        "renewalReceipt": { "type": "string", "description": "Receipt image or transaction proof" },
+        "renewalRequestedAt": { "type": "string", "description": "Timestamp of renewal request" },
+        "x": { "type": "number", "description": "X coordinate in market map" },
+        "y": { "type": "number", "description": "Y coordinate in market map" },
+        "ownerUid": { "type": "string", "description": "Owner user ID" },
+        "updatedAt": { "type": "string", "description": "Last update ISO timestamp" }
+      },
+      "required": ["name", "category", "whatsapp"]
+    },
+    "Lead": {
+      "title": "Lead",
+      "description": "Advertising or stall rental inquiry from a business owner",
+      "type": "object",
+      "properties": {
+        "shopName": { "type": "string", "description": "Shop name" },
+        "whatsapp": { "type": "string", "description": "WhatsApp contact number" },
+        "instagram": { "type": "string", "description": "Instagram handle" },
+        "category": { "type": "string", "description": "Product category" },
+        "createdAt": { "type": "string", "description": "Creation timestamp" },
+        "status": { "type": "string", "description": "Lead status" }
+      },
+      "required": ["shopName", "whatsapp"]
+    },
+    "Visitor": {
+      "title": "Visitor",
+      "description": "Active shopper avatar position for live market presence",
+      "type": "object",
+      "properties": {
+        "x": { "type": "number", "description": "X position on map" },
+        "y": { "type": "number", "description": "Y position on map" },
+        "color": { "type": "string", "description": "Avatar accent color" },
+        "name": { "type": "string", "description": "Shopper name or pidgin alias" },
+        "updatedAt": { "type": "number", "description": "Unix timestamp of last heartbeat" }
+      },
+      "required": ["x", "y"]
+    }
+  },
+  "firestore": {
+    "/stalls/{stallId}": {
+      "schema": "Stall",
+      "description": "Market stalls and shops across Wuse Market grid"
+    },
+    "/leads/{leadId}": {
+      "schema": "Lead",
+      "description": "Prospective shop owner rental leads"
+    },
+    "/visitors/{visitorId}": {
+      "schema": "Visitor",
+      "description": "Live shopper positions on the interactive map"
+    }
+  }
+}
